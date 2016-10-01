@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="16dp"
+    android:gravity="center_horizontal|center_vertical"
+    android:background="#F0F"
+    >
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to the Muxic app"
+        android:textColor="@android:color/white"
+        android:textSize="30dp"
+        android:layout_marginTop="0dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Here you can..."
+        android:textColor="@android:color/white"
+        android:textSize="30dp"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold" />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="75dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Knot"
+            android:textColor="@android:color/white"
+            android:textSize="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="165dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="it"
+            android:layout_marginLeft="190dp"
+            android:paddingTop="5dp"
+            android:textColor="@android:color/white"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_marginTop="220dp"
+        android:text="Knot your music and playlist to others and let them enjoy what you're listening"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="17dp" />
+
+</LinearLayout>

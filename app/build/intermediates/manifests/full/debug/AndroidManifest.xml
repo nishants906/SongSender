@@ -32,6 +32,8 @@
             </intent-filter>
         </activity>
         <activity android:name="first.com.test.MusicActivity" />
+        <activity android:name="first.com.test.Login" />
+        <activity android:name="first.com.test.Intro" />
     </application>
 
 </manifest>

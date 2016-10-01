@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="array_dot_active"/>
+    <string-array name="array_dot_inactive"/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
     <attr format="boolean" name="isLightTheme"/>
@@ -278,11 +280,18 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <string name="app_name">test</string>
+    <string name="app_name">Muxic</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="icon">iconimage</string>
+    <string name="next">NEXT</string>
+    <string name="start">Lets Get Started</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="title_activity_main3">MainActivity3</string>
+    <string name="title_activity_playlist">Playlist</string>
+    <string name="title_activity_welcome">Home Screen</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>

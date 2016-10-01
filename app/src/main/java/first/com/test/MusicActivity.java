@@ -60,7 +60,6 @@ public class MusicActivity extends Activity  {
                     e.printStackTrace();
                 }
                 if(file.exists()) {
-
                     Intent sendIntent = new Intent();
                     sendIntent.setAction(Intent.ACTION_SEND);
                     sendIntent.putExtra(Intent.EXTRA_TEXT, String.valueOf(data));
@@ -92,7 +91,7 @@ public class MusicActivity extends Activity  {
     private void init_phone_music_grid() {
         String[] proj = { MediaStore.Audio.Media._ID,
                 MediaStore.Audio.Media.DATA,
-                MediaStore.Audio.Media.DISPLAY_NAME,
+                 MediaStore.Audio.Media.DISPLAY_NAME,
                 MediaStore.Video.Media.SIZE };
         cursor = managedQuery(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI,
                 proj, null, null, null);

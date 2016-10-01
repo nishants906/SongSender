@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
                 }catch(InterruptedException e){
                     e.printStackTrace();
                 }finally{
-                    Intent intent = new Intent(MainActivity.this,MusicActivity.class);
+                    Intent intent = new Intent(MainActivity.this,Intro.class);
                     startActivity(intent);
                 }
             }
