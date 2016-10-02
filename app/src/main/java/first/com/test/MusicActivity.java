@@ -24,7 +24,7 @@ public class MusicActivity extends Activity  {
     private final String MEDIA_PATH = new String("/sdcard/");
     Cursor cursor;
     int count;
-    Button send;
+    Button send,bluetooth1;
     private List<String> songs = new ArrayList<>();
     MusicAdapter madapter;
     String file=null;
@@ -42,6 +42,17 @@ public class MusicActivity extends Activity  {
         send= (Button) findViewById(R.id.send);
 
         final File file=new File(path + "/myfile.txt");
+
+        bluetooth1= (Button) findViewById(R.id.bluetooth);
+        bluetooth1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent=new Intent(MusicActivity.this,blutooth.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
 
         send.setOnClickListener(new View.OnClickListener() {

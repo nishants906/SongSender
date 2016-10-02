@@ -24,7 +24,7 @@ import android.widget.ToggleButton;
 import java.io.IOException;
 import java.util.UUID;
 
-public class bluetooth extends AppCompatActivity {
+public class blutooth extends AppCompatActivity {
 
     TextView name;
     DBHandler db;
@@ -70,7 +70,8 @@ public class bluetooth extends AppCompatActivity {
         toggleButton = (ToggleButton) findViewById(R.id.toggleButton);
         listview = (ListView) findViewById(R.id.listView);
         name= (TextView) findViewById(R.id.name);
-        db=new DBHandler(getApplicationContext());
+
+
 
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -111,7 +112,7 @@ public class bluetooth extends AppCompatActivity {
             toggleButton.setChecked(!bluetoothAdapter.isEnabled());
             if (bluetoothAdapter.isEnabled()) {
                 bluetoothAdapter.disable();
-                Toast.makeText(bluetooth.this, "Bluetooth disabled", Toast.LENGTH_SHORT).show();
+                Toast.makeText(blutooth.this, "Bluetooth disabled", Toast.LENGTH_SHORT).show();
             }
             else{
                 ///bluetoothAdapter.enable(); //This does not ask for user to permit connection

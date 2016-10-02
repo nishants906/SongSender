@@ -44,6 +44,10 @@
         "source": "C:\\Users\\Test\\AndroidStudioProjects\\test2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_dialog_title_material.xml"
     },
     {
+        "merged": "C:\\Users\\Test\\AndroidStudioProjects\\test2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_data_transfer.xml",
+        "source": "C:\\Users\\Test\\AndroidStudioProjects\\test2\\app\\src\\main\\res\\layout\\activity_data_transfer.xml"
+    },
+    {
         "merged": "C:\\Users\\Test\\AndroidStudioProjects\\test2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_intro_fragment3.xml",
         "source": "C:\\Users\\Test\\AndroidStudioProjects\\test2\\app\\src\\main\\res\\layout\\fragment_intro_fragment3.xml"
     },
@@ -66,6 +70,10 @@
     {
         "merged": "C:\\Users\\Test\\AndroidStudioProjects\\test2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_intro_fragment4.xml",
         "source": "C:\\Users\\Test\\AndroidStudioProjects\\test2\\app\\src\\main\\res\\layout\\fragment_intro_fragment4.xml"
+    },
+    {
+        "merged": "C:\\Users\\Test\\AndroidStudioProjects\\test2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_choice.xml",
+        "source": "C:\\Users\\Test\\AndroidStudioProjects\\test2\\app\\src\\main\\res\\layout\\activity_choice.xml"
     },
     {
         "merged": "C:\\Users\\Test\\AndroidStudioProjects\\test2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
@@ -198,6 +206,10 @@
     {
         "merged": "C:\\Users\\Test\\AndroidStudioProjects\\test2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
         "source": "C:\\Users\\Test\\AndroidStudioProjects\\test2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Test\\AndroidStudioProjects\\test2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_bluetooth.xml",
+        "source": "C:\\Users\\Test\\AndroidStudioProjects\\test2\\app\\src\\main\\res\\layout\\activity_bluetooth.xml"
     },
     {
         "merged": "C:\\Users\\Test\\AndroidStudioProjects\\test2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",

@@ -2,14 +2,12 @@ package first.com.test;
 
 /**
  * Created by Test on 10/1/2016.
- */import android.annotation.TargetApi;
+ */ import android.annotation.TargetApi;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
@@ -43,16 +41,10 @@ public class DataTransfer extends AppCompatActivity {
 
         db=new DBHandler(getApplicationContext());
 
-        lm = new LinearLayoutManager(this);
-        list.setLayoutManager(lm);
-
-        list.setItemAnimator(new DefaultItemAnimator());
-        list.setAdapter(adapter);
-
         screen= (TextView) findViewById(R.id.screen);
 
-        bluetoothDevice = bluetooth.mBluetoothDevice;
-        bluetoothSocket = bluetooth.mBluetoothSocket;
+        bluetoothDevice = blutooth.mBluetoothDevice;
+        bluetoothSocket = blutooth.mBluetoothSocket;
         final ConnectedThread ct = new ConnectedThread(bluetoothSocket);
         ct.start();
 
@@ -65,22 +57,14 @@ public class DataTransfer extends AppCompatActivity {
                                    @TargetApi(Build.VERSION_CODES.KITKAT)
                                    @Override
                                    public void onClick(View v) {
-                                       if (!Objects.equals(inputMessage.getText().toString(), "")){
+                                       if (!Objects.equals(db.access_data().toString(), "")){
                                            Log.d(TAG, "Clicked");
                                            String msg = String.valueOf(db.access_data());
                                            byte[] bytes = msg.getBytes();
                                            ct.write(bytes);
                                            Log.d("message1", msg);
 
-                                           list.post(new Runnable() {
-                                               @Override
-                                               public void run() {
-                                                   adapter.notifyDataSetChanged();
-
-                                               }
-                                           });
                                            Log.d("query1",msg);
-                                           inputMessage.getText().clear();
 
                                        }
                                    }
@@ -124,7 +108,6 @@ public class DataTransfer extends AppCompatActivity {
                                 public void run() {
                                     if(readMessage!=null) {
                                         screen.setText(readMessage);
-                                        adapter.notifyDataSetChanged();
 
                                         Log.d("Query", readMessage);
 /*                                        textview1.setText(readMessage);
