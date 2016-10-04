@@ -21,13 +21,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MusicActivity extends Activity  {
-    private final String MEDIA_PATH = new String("/sdcard/");
+
     Cursor cursor;
     int count;
     Button send,bluetooth1;
     private List<String> songs = new ArrayList<>();
     MusicAdapter madapter;
-    String file=null;
     DBHandler db;
     public String path=Environment.getExternalStorageDirectory().getAbsolutePath() ;
 

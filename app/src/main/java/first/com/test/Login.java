@@ -45,6 +45,13 @@ public class Login extends AppCompatActivity {
 
         TextView button = (TextView) findViewById(R.id.btnSelectPhoto);
         mImageView = (ImageView) findViewById(R.id.viewImage);
+        TextView cancel= (TextView) findViewById(R.id.cancel);
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         TextView switchtxt = (TextView) findViewById(R.id.ok);
         switchtxt.setOnClickListener(new View.OnClickListener() {
@@ -64,8 +71,8 @@ public class Login extends AppCompatActivity {
                 dialog.show();
             }
         });
-
     }
+
 
     private void captureImage() {
 

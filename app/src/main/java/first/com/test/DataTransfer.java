@@ -7,17 +7,23 @@ import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.List;
 import java.util.Objects;
 
 public class DataTransfer extends AppCompatActivity {
@@ -28,9 +34,12 @@ public class DataTransfer extends AppCompatActivity {
     BluetoothDevice bluetoothDevice;
     Button bt1;
     TextView screen;
-    EditText inputMessage;
-    RecyclerView list;
-    RecyclerView.Adapter adapter;
+    ListView list;
+    private ArrayAdapter adapter=null;
+    int i=0;
+
+    public String path= Environment.getExternalStorageDirectory().getAbsolutePath() ;
+
     DBHandler db;
     private RecyclerView.LayoutManager lm;
 
@@ -42,12 +51,24 @@ public class DataTransfer extends AppCompatActivity {
         db=new DBHandler(getApplicationContext());
 
         screen= (TextView) findViewById(R.id.screen);
+        list= (ListView) findViewById(R.id.list);
+
+        adapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1);
+        list.setAdapter(adapter);
 
         bluetoothDevice = blutooth.mBluetoothDevice;
         bluetoothSocket = blutooth.mBluetoothSocket;
         final ConnectedThread ct = new ConnectedThread(bluetoothSocket);
         ct.start();
+        final List<String> data=db.access_data();
 
+        while(i<(db.access_data().size())){
+
+            adapter.add(data.get(i));
+            i++;
+
+        }
+        i=0;
       /*  ll1= (LinearLayout) findViewById(R.id.ll1);
         textview2= (TextView) senderlayoyt.findViewById(R.id.text1);*/
 
@@ -59,12 +80,12 @@ public class DataTransfer extends AppCompatActivity {
                                    public void onClick(View v) {
                                        if (!Objects.equals(db.access_data().toString(), "")){
                                            Log.d(TAG, "Clicked");
-                                           String msg = String.valueOf(db.access_data());
-                                           byte[] bytes = msg.getBytes();
-                                           ct.write(bytes);
-                                           Log.d("message1", msg);
-
-                                           Log.d("query1",msg);
+                                           List msg = data;
+                                           while(i<(db.access_data().size())) {
+                                               byte[] bytes = String.valueOf(msg.get(i)).getBytes();
+                                               ct.write(bytes);
+                                               i++;
+                                           }
 
                                        }
                                    }
@@ -107,7 +128,19 @@ public class DataTransfer extends AppCompatActivity {
                                 @Override
                                 public void run() {
                                     if(readMessage!=null) {
-                                        screen.setText(readMessage);
+                                        File file=new File(path + "/myfile.txt");
+
+                                        try {
+                                            FileOutputStream fo = new FileOutputStream(file);
+                                            fo.write(String.valueOf(readMessage).getBytes());
+                                        } catch (FileNotFoundException e) {
+                                            e.printStackTrace();
+                                        } catch (IOException e) {
+                                            e.printStackTrace();
+                                        }
+
+                                        adapter.add(readMessage);
+
 
                                         Log.d("Query", readMessage);
 /*                                        textview1.setText(readMessage);

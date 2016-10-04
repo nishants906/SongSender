@@ -66,10 +66,8 @@ public class DBHandler extends SQLiteOpenHelper {
         cursor.moveToFirst();
         if(cursor.getCount() > 0) {
             do {
-                List<String> row=new ArrayList<>();
-                row.add(cursor.getString(0));
-                pos_note.add(String.valueOf(row));
-                Log.d("rowadd2", String.valueOf(row));
+
+                pos_note.add(cursor.getString(0));
 
             } while(cursor.moveToNext());
 
