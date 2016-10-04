@@ -27,6 +27,7 @@ public class Intro extends AppCompatActivity {
     private TextView[] dots;
     private int[] layouts;
     private Button btnNext;
+    DBHandler db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +39,8 @@ public class Intro extends AppCompatActivity {
         }
 
         setContentView(R.layout.activity_intro);
+
+        db=new DBHandler(getApplicationContext());
 
         viewPager = (ViewPager) findViewById(R.id.view_pager);
         dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
@@ -75,9 +78,16 @@ public class Intro extends AppCompatActivity {
     }
 
     private void launchScreen() {
-        Intent intent = new Intent(Intro.this, Login.class);
-        startActivity(intent);
-        finish();
+        if(db.access_login().size()== 0 ) {
+            Intent intent = new Intent(Intro.this, Login.class);
+            startActivity(intent);
+            finish();
+        }
+        else{
+            Intent intent = new Intent(Intro.this, choice.class);
+            startActivity(intent);
+            finish();
+        }
     }
 
     //  viewpager change listener

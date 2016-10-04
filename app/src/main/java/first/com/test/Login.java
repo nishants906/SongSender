@@ -18,6 +18,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,7 +33,9 @@ public class Login extends AppCompatActivity {
     private Uri mImageCaptureUri;
     private ImageView mImageView;
     private AlertDialog dialog;
+    EditText username;
 
+    DBHandler db;
     private static final int PICK_FROM_CAMERA = 1;
     private static final int CROP_FROM_CAMERA = 2;
     private static final int PICK_FROM_FILE = 3;
@@ -42,6 +45,10 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         captureImage();
+
+        username= (EditText) findViewById(R.id.name);
+        db=new DBHandler(getApplicationContext());
+        db.new_login(String.valueOf(username.getText()));
 
         TextView button = (TextView) findViewById(R.id.btnSelectPhoto);
         mImageView = (ImageView) findViewById(R.id.viewImage);
