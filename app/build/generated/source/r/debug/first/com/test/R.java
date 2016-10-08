@@ -2314,16 +2314,17 @@ containing a value of this type.
         public static final int design_fab_background=0x7f02004d;
         public static final int design_snackbar_background=0x7f02004e;
         public static final int hoice=0x7f02004f;
-        public static final int m=0x7f020050;
-        public static final int m1=0x7f020051;
-        public static final int m2=0x7f020052;
-        public static final int m3=0x7f020053;
-        public static final int music=0x7f020054;
-        public static final int musicwall=0x7f020055;
-        public static final int notification_template_icon_bg=0x7f020059;
-        public static final int profile=0x7f020056;
-        public static final int profile1=0x7f020057;
-        public static final int send=0x7f020058;
+        public static final int icon=0x7f020050;
+        public static final int m=0x7f020051;
+        public static final int m1=0x7f020052;
+        public static final int m2=0x7f020053;
+        public static final int m3=0x7f020054;
+        public static final int music=0x7f020055;
+        public static final int musicwall=0x7f020056;
+        public static final int notification_template_icon_bg=0x7f02005a;
+        public static final int profile=0x7f020057;
+        public static final int profile1=0x7f020058;
+        public static final int send=0x7f020059;
     }
     public static final class id {
         public static final int action0=0x7f0d0089;
@@ -2419,7 +2420,7 @@ containing a value of this type.
         public static final int progress_circular=0x7f0d0006;
         public static final int progress_horizontal=0x7f0d0007;
         public static final int radio=0x7f0d0054;
-        public static final int recieve=0x7f0d006e;
+        public static final int recieve=0x7f0d006d;
         public static final int right=0x7f0d0024;
         public static final int rl=0x7f0d0073;
         public static final int screen=0x7f0d0028;
@@ -2439,7 +2440,7 @@ containing a value of this type.
         public static final int search_src_text=0x7f0d0063;
         public static final int search_voice_btn=0x7f0d0067;
         public static final int select_dialog_listview=0x7f0d0068;
-        public static final int send=0x7f0d006d;
+        public static final int send=0x7f0d006e;
         public static final int shortcut=0x7f0d0053;
         public static final int showCustom=0x7f0d0011;
         public static final int showHome=0x7f0d0012;

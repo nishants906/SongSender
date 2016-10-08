@@ -2,7 +2,9 @@ package first.com.test;
 
 /**
  * Created by Test on 10/1/2016.
- */ import android.annotation.TargetApi;
+ */
+
+import android.annotation.TargetApi;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.os.Build;

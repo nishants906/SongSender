@@ -64,9 +64,9 @@ MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\Test\AndroidStudioProj
 	android:allowBackup
 		ADDED from C:\Users\Test\AndroidStudioProjects\test2\app\src\main\AndroidManifest.xml:19:9-35
 	android:icon
-		ADDED from C:\Users\Test\AndroidStudioProjects\test2\app\src\main\AndroidManifest.xml:20:9-43
+		ADDED from C:\Users\Test\AndroidStudioProjects\test2\app\src\main\AndroidManifest.xml:20:9-38
 	android:theme
-		ADDED from C:\Users\Test\AndroidStudioProjects\test2\app\src\main\AndroidManifest.xml:23:9-40
+		ADDED from C:\Users\Test\AndroidStudioProjects\test2\app\src\main\AndroidManifest.xml:23:9-56
 activity#first.com.test.MainActivity
 ADDED from C:\Users\Test\AndroidStudioProjects\test2\app\src\main\AndroidManifest.xml:24:9-30:20
 	android:name

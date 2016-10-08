@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_choice"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/hoice"
     tools:context="first.com.test.choice">
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Send"
-        android:layout_marginTop="80dp"
-        android:layout_gravity="center_horizontal"
-        android:id="@+id/send"/>
+        android:text="recieve"
+        android:id="@+id/recieve"
+        android:layout_marginLeft="123dp"
+        android:layout_marginEnd="65dp"
+        android:layout_alignBaseline="@+id/send"
+        android:layout_alignBottom="@+id/send"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="recieve"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="170dp"
-        android:id="@+id/recieve"/>
+        android:text="Send"
+        android:id="@+id/send"
+        android:layout_marginBottom="77dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp" />
 
-</LinearLayout>
+</RelativeLayout>
